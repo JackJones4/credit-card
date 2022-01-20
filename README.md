@@ -46,7 +46,7 @@ Expected Output: "4204 0707 8046 5320"
 
 Test: "It should return sum of all the digits"
 Code:
-luhnAlgorithm("4204 0707 8046 5320");
+luhnAlgorithm("4102 0808 8043 5620");
 Expected Output: "52"
 
 Test: "It should return "This card number is valid." if the number ends in a zero"

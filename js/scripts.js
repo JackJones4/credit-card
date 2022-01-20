@@ -2,6 +2,7 @@
 function luhnAlgorithm(number) {
   const cleanNumber = number.replace(/\s/g, '')
   const array = cleanNumber.split("");
+  let sum = 0;
   if (array.length === 16) {
     console.log("This card number is valid.");
   } else {
@@ -19,5 +20,10 @@ function luhnAlgorithm(number) {
     }
   };
 
+  numbers.forEach(function(number) {
+    sum += number;
+  });
+
   console.log(numbers);
+  console.log(sum);
 }
