@@ -76,6 +76,16 @@ Expected Output: "Mastercards"
 Test: "It should return "Discover Cards" if the card number begins with 6"
 Code: company("6102080880435620")
 Expected Output: "Discover Cards"
+
+Describe: length()
+
+Test: "It should return "This card number is valid." if the length is 16 and the company is Visa, Mastercard, or Discover"
+Code: length("6102080880435620")
+Expected Output: "This card number is valid."
+
+Test: "It should return "This card number is valid." if the length is 15 and the company is American Express"
+Code: length("340208088043562")
+Expected Output: "This card number is valid."
 ## Known Bugs
 
 * _Any known issues_

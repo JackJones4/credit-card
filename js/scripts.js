@@ -3,9 +3,6 @@ function luhnAlgorithm(number) {
   const cleanNumber = number.replace(/\s/g, '')
   const array = cleanNumber.split("");
   let sum = 0;
-  if (array.length !== 16) {
-    console.log("This is not a card number.");
-  } 
 
   const numbers = array.map(Number);
 
@@ -33,18 +30,30 @@ function company(number) {
   const cleanNumber = number.replace(/\s/g, '')
   const array = cleanNumber.split("");
   const numbers = array.map(Number);
-  if (numbers.length !== 16) {
-    console.log("This is not a card number.");
-  } 
+  let company = "";
 
   if (numbers[0] === 3 && (numbers[1] === 4 || numbers[1] === 7)) {
-    console.log("American Express");
+    company = "American Express";
   } else if (numbers[0] === 4) {
-    console.log("Visa");
+    company = "Visa";
   } else if (numbers[0] === 5) {
-    console.log("Mastercards");
+    company = "Mastercard";
   } else if (numbers[0] === 6) {
-    console.log("Discover Cards");
+    company = "Discover Card";
   }
+  return company;
+}
 
+function length(number) {
+  const cleanNumber = number.replace(/\s/g, '')
+  const array = cleanNumber.split("");
+  const numbers = array.map(Number);
+
+  if (numbers.length === 16 && (company(number) === "Visa" || company(number) === "Mastercard" || company(number) === "Discover Card")) {
+    console.log("This is a valid card number.");
+  }  else if (numbers.length === 15 && company(number) === "American Express") {
+    console.log("This is a valid card number.");
+  } else {
+    console.log("This is not a valid card number.");
+  }
 }
