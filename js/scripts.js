@@ -41,6 +41,8 @@ function company(number) {
     console.log("American Express");
   } else if (numbers[0] === 4) {
     console.log("Visa");
+  } else if (numbers[0] === 5) {
+    console.log("Mastercards");
   }
 
 }
