@@ -43,6 +43,8 @@ function company(number) {
     console.log("Visa");
   } else if (numbers[0] === 5) {
     console.log("Mastercards");
+  } else if (numbers[0] === 6) {
+    console.log("Discover Cards");
   }
 
 }
