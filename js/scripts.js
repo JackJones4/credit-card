@@ -28,3 +28,19 @@ function luhnAlgorithm(number) {
     console.log("This card number is not valid.");
   }
 }
+
+function company(number) {
+  const cleanNumber = number.replace(/\s/g, '')
+  const array = cleanNumber.split("");
+  const numbers = array.map(Number);
+  if (numbers.length !== 16) {
+    console.log("This is not a card number.");
+  } 
+
+  if (numbers[0] === 3 && (numbers[1] === 4 || numbers[1] === 7)) {
+    console.log("American Express");
+  } else if (numbers[0] === 4) {
+    console.log("Visa");
+  }
+
+}
