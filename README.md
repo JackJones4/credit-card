@@ -27,6 +27,37 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Tests 
 
+Describe: luhnAlgorithm()
+
+Test: "It should return "This card number is valid." if there are 16 numbers in the input"
+Code:
+luhnAlgorithm("4102 0808 8043 5620");
+Expected Output: "This card number is valid."
+
+Test: "It should return number with every other digit being doubled."
+Code:
+luhnAlgorithm("4102 0808 8043 5620");
+Expected Output: "4204 016016 8046 51220"
+
+Test: "It should return number with every other digit being doubled and summed if it is a double-digit number."
+Code:
+luhnAlgorithm("4102 0808 8043 5620");
+Expected Output: "4204 0707 8046 5320"
+
+Test: "It should return sum of all the digits"
+Code:
+luhnAlgorithm("4204 0707 8046 5320");
+Expected Output: "52"
+
+Test: "It should return "This card number is valid." if the number ends in a zero"
+Code:
+luhnAlgorithm("4102080860435620");
+Expected Output: "This card number is valid."
+
+Test: "It should return "This card number is not valid." if the number does not end in a zero"
+Code:
+luhnAlgorithm("4102080880435620");
+Expected Output: "This card number is not valid."
 ## Known Bugs
 
 * _Any known issues_
