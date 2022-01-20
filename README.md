@@ -58,6 +58,24 @@ Test: "It should return "This card number is not valid." if the number does not 
 Code:
 luhnAlgorithm("4102080880435620");
 Expected Output: "This card number is not valid."
+
+Describe: company()
+
+Test: "It should return "American Express" if the card number begins with 34 or 37"
+Code: company("3402080880435620")
+Expected Output: "American Express"
+
+Test: "It should return "Visa" if the card number begins with 4"
+Code: company("4102080880435620")
+Expected Output: "Visa"
+
+Test: "It should return "Mastercards" if the card number begins with 5"
+Code: company("5102080880435620")
+Expected Output: "Mastercards"
+
+Test: "It should return "Discover Cards" if the card number begins with 6"
+Code: company("6102080880435620")
+Expected Output: "Discover Cards"
 ## Known Bugs
 
 * _Any known issues_
